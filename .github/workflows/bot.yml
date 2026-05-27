@@ -36,7 +36,7 @@ jobs:
         run: |
           # Create data directory for state if it doesn't exist
           mkdir -p data
-          python -m spacex_twitter_bot.bot --force --allow-stale --force --allow-stale
+          python -m spacex_twitter_bot.bot --force --allow-stale
 
       - name: Commit state
         run: |
