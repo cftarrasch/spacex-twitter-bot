@@ -36,6 +36,9 @@ jobs:
         run: |
           # Create data directory for state if it doesn't exist
           mkdir -p data
+          # Train the model freshly on the runner
+          python train_model.py
+          # Run the bot
           python -m spacex_twitter_bot.bot --force --allow-stale
 
       - name: Commit state
